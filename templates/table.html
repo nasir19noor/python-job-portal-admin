@@ -1,0 +1,54 @@
+<!-- templates/table.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Search Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Search Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>IP Address</th>
+                <th>Browser</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Search Role</th>
+                <th>Search Location</th>
+                <th>Search Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.id }}</td>
+                <td>{{ record.ip_address }}</td>
+                <td>{{ record.browser }}</td>
+                <td>{{ record.city }}</td>
+                <td>{{ record.country }}</td>
+                <td>{{ record.search_role }}</td>
+                <td>{{ record.search_location }}</td>
+                <td>{{ record.search_time }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
