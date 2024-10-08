@@ -5,8 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 # Configure the PostgreSQL database connection
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Love1981@localhost/jobportal'
-# Disable the modification tracking feature of SQLAlchemy (which you don't need)
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Love1981@localhost/jobportal'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize the database
